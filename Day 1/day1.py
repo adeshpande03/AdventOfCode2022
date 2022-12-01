@@ -1,5 +1,3 @@
-import os
-print(os.listdir())
 inputFile = open("input.txt", "r")
 arr = [0]
 index = 0
@@ -9,4 +7,5 @@ for line in inputFile:
         index += 1
     else:
         arr[index] += int(line.strip())
-print(sum(sorted(arr, reverse = True)[0:3]))
+print(max(arr))  # Part 1
+print(sum(sorted(arr, reverse=True)[0:3]))  # Part 2

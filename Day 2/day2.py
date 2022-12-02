@@ -1,6 +1,6 @@
 def part1(filename):
-    pointTotal = 0
     key = {"X": 1, "Y": 2, "Z": 3}
+    f = open(filename, "r")
 
     def matchup(opponent, me):
         oppPossible = ["A", "B", "C"]
@@ -14,11 +14,13 @@ def part1(filename):
         else:
             return 0
 
-    f = open(filename, "r")
-    for line in f:
-        line = line.strip().split()
-        pointTotal += key.get(line[1]) + matchup(line[0], line[1])
-    return pointTotal
+    return sum(
+        [
+            key.get(line.strip().split()[1])
+            + matchup(line.strip().split()[0], line.strip().split()[1])
+            for line in f
+        ]
+    )
 
 
 def part2(filename):

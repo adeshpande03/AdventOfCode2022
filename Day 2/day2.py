@@ -1,6 +1,7 @@
 def part1(filename):
     key = {"X": 1, "Y": 2, "Z": 3}
     f = open(filename, "r")
+
     def matchup(opponent, me):
         opponent = ["A", "B", "C"].index(opponent)
         me = ["X", "Y", "Z"].index(me)
@@ -17,12 +18,11 @@ def part1(filename):
 
 def part2(filename):
     f = open(filename, "r")
+    oppPossible = ["X", "Y", "Z"]
     resultKey = {"X": 0, "Y": 3, "Z": 6}
     choiceKey = {"X": 1, "Y": 2, "Z": 3}
     matchingOppToMe = {"A": "X", "B": "Y", "C": "Z"}
-
     def pickMe(opponent, result):
-        oppPossible = ["X", "Y", "Z"]
         if result == 0:
             myChoice = (
                 oppPossible[oppPossible.index(opponent) - 1]

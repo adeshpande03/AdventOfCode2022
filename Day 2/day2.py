@@ -1,6 +1,3 @@
-import os
-
-
 def part1(filename):
     pointTotal = 0
     key = {"X": 1, "Y": 2, "Z": 3}
@@ -58,6 +55,5 @@ def part2(filename):
     return pointTotal
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(part1("input.txt"), part2("input.txt"))

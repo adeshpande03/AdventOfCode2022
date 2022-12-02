@@ -1,16 +1,10 @@
 def part1(filename):
     key = {"X": 1, "Y": 2, "Z": 3}
     f = open(filename, "r")
-
     def matchup(opponent, me):
         opponent = ["A", "B", "C"].index(opponent)
         me = ["X", "Y", "Z"].index(me)
-        if me - opponent in [1, -2]:
-            return 6
-        elif me - opponent == 0:
-            return 3
-        else:
-            return 0
+        return 6 if me - opponent in [1, -2] else 3 if me - opponent == 0 else 0
 
     return sum(
         [

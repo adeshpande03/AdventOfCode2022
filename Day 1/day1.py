@@ -11,8 +11,8 @@
 # print(sum(sorted(arr, reverse=True)[0:3]))  # Part 2
 
 # Part 1 O(n)
-def part1():
-    inputFile = open("input.txt", "r")
+def part1(fileName):
+    inputFile = open(fileName, "r")
     num, currSum = 0, 0
     for line in inputFile:
         if len(line) == 1:
@@ -23,8 +23,8 @@ def part1():
     return(num)
 
 # Part 2 O(n)
-def part2():
-    inputFile = open("input.txt", "r")
+def part2(fileName):
+    inputFile = open(fileName, "r")
     currSum, maxArr = 0, [0, 0, 0]
     for line in inputFile:
         if len(line) == 1:
@@ -35,4 +35,6 @@ def part2():
     return(sum(maxArr))
 
 if __name__ == '__main__':
-    print(part1(), part2())
+    import os
+    print(os.path.dirname(os.path.realpath(__file__)))
+    print(part1(f"{os.path.dirname(os.path.realpath(__file__))}/input.txt"), part2(f"{os.path.dirname(os.path.realpath(__file__))}/input.txt"))

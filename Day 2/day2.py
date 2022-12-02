@@ -7,4 +7,5 @@ def part2(fileName):
     
 
 if __name__ == "__main__":
-    print(part1("input.txt"), part2("input.txt"))
+    import os
+    print(part1(f"{os.path.dirname(os.path.realpath(__file__))}/input.txt"), part2(f"{os.path.dirname(os.path.realpath(__file__))}/input.txt"))

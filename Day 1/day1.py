@@ -26,7 +26,7 @@ def part2():
     currSum, maxArr = 0, [0, 0, 0]
     for line in inputFile:
         if len(line) == 1:
-            maxArr[0] = max(currSum, min(maxArr))
+            maxArr[0] = max(currSum, maxArr[0])
             maxArr, currSum = sorted(maxArr), 0            
         else:
             currSum += int(line.strip())

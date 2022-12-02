@@ -1,19 +1,5 @@
 def part1(filename):
-    key = {"X": 1, "Y": 2, "Z": 3}
-    f = open(filename, "r")
-
-    def matchup(opponent, me):
-        opponent = ["A", "B", "C"].index(opponent)
-        me = ["X", "Y", "Z"].index(me)
-        return 6 if me - opponent in [1, -2] else 3 if me - opponent == 0 else 0
-
-    return sum(
-        [
-            key.get(line.strip().split()[1])
-            + matchup(line.strip().split()[0], line.strip().split()[1])
-            for line in f
-        ]
-    )
+    return sum([{"X": 1, "Y": 2, "Z": 3}.get(line.strip().split()[1]) + (6 if ["X", "Y", "Z"].index(line.strip().split()[1]) - ["A", "B", "C"].index(line.strip().split()[0]) in [1, -2] else 3 if ["X", "Y", "Z"].index(line.strip().split()[1]) - ["A", "B", "C"].index(line.strip().split()[0]) == 0 else 0) for line in open(filename, "r")])
 
 
 def part2(filename):

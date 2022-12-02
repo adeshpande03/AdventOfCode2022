@@ -22,6 +22,7 @@ def part2(filename):
     resultKey = {"X": 0, "Y": 3, "Z": 6}
     choiceKey = {"X": 1, "Y": 2, "Z": 3}
     matchingOppToMe = {"A": "X", "B": "Y", "C": "Z"}
+
     def pickMe(opponent, result):
         if result == 0:
             myChoice = (

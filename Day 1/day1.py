@@ -19,7 +19,7 @@ def part1():
             currSum = 0
         else:
             currSum += int(line.strip())
-    print(num)
+    return(num)
 
 # Part 2 O(n)
 def part2():
@@ -30,4 +30,4 @@ def part2():
             maxArr, currSum = sorted(maxArr), 0            
         else:
             currSum += int(line.strip())
-    print(sum(maxArr))
+    return(sum(maxArr))

@@ -1,5 +1,5 @@
-def part1(filename):
-    return sum([{"X": 1, "Y": 2, "Z": 3}.get(line.strip().split()[1]) + (6 if ["X", "Y", "Z"].index(line.strip().split()[1]) - ["A", "B", "C"].index(line.strip().split()[0]) in [1, -2] else 3 if ["X", "Y", "Z"].index(line.strip().split()[1]) - ["A", "B", "C"].index(line.strip().split()[0]) == 0 else 0) for line in open(filename, "r")])
+def part1(fileName):
+    return sum([{"X": 1, "Y": 2, "Z": 3}.get(line.strip().split()[1]) + (6 if ["X", "Y", "Z"].index(line.strip().split()[1]) - ["A", "B", "C"].index(line.strip().split()[0]) in [1, -2] else 3 if ["X", "Y", "Z"].index(line.strip().split()[1]) - ["A", "B", "C"].index(line.strip().split()[0]) == 0 else 0) for line in open(fileName, "r")])
 
 
 def part2(filename):

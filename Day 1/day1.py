@@ -23,7 +23,7 @@ def part1():
 
 # Part 2 O(n)
 def part2():
-    num, currSum, maxArr = 0, 0, [0, 0, 0]
+    currSum, maxArr = 0, [0, 0, 0]
     for line in inputFile:
         if len(line) == 1:
             currSum, maxArr[maxArr.index(min(maxArr))] = 0, max(currSum, min(maxArr))

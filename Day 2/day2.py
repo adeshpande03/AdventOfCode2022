@@ -3,10 +3,8 @@ def part1(filename):
     f = open(filename, "r")
 
     def matchup(opponent, me):
-        oppPossible = ["A", "B", "C"]
-        mePossible = ["X", "Y", "Z"]
-        opponent = oppPossible.index(opponent)
-        me = mePossible.index(me)
+        opponent = ["A", "B", "C"].index(opponent)
+        me = ["X", "Y", "Z"].index(me)
         if me - opponent in [1, -2]:
             return 6
         elif me - opponent == 0:

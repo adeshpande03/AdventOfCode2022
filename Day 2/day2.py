@@ -56,3 +56,8 @@ def part2(filename):
             pickMe(matchingOppToMe[line[0]], resultKey[line[1]]) + resultKey[line[1]]
         )
     return pointTotal
+
+
+
+if __name__ == '__main__':
+    print(part1("input.txt"), part2("input.txt"))

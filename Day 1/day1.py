@@ -1,4 +1,4 @@
-inputFile = open("input.txt", "r")
+
 # arr = [0]
 # index = 0
 # for line in inputFile:
@@ -12,6 +12,7 @@ inputFile = open("input.txt", "r")
 
 # Part 1 O(n)
 def part1():
+    inputFile = open("input.txt", "r")
     num, currSum = 0, 0
     for line in inputFile:
         if len(line) == 1:
@@ -23,6 +24,7 @@ def part1():
 
 # Part 2 O(n)
 def part2():
+    inputFile = open("input.txt", "r")
     currSum, maxArr = 0, [0, 0, 0]
     for line in inputFile:
         if len(line) == 1:
@@ -31,3 +33,6 @@ def part2():
         else:
             currSum += int(line.strip())
     return(sum(maxArr))
+
+if __name__ == '__main__':
+    print(part1(), part2())

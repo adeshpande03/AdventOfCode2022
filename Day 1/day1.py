@@ -36,5 +36,4 @@ def part2(fileName):
 
 if __name__ == '__main__':
     import os
-    print(os.path.dirname(os.path.realpath(__file__)))
     print(part1(f"{os.path.dirname(os.path.realpath(__file__))}/input.txt"), part2(f"{os.path.dirname(os.path.realpath(__file__))}/input.txt"))

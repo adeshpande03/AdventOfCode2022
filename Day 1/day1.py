@@ -31,4 +31,3 @@ def part2():
         else:
             currSum += int(line.strip())
     print(sum(maxArr))
-part2()

@@ -7,7 +7,8 @@ def part1(fileName):
                 and int(line.split(",")[0].split("-")[1])
                 <= int(line.split(",")[1].split("-")[1])
             )
-            or (
+            or 
+            (
                 int(line.split(",")[1].split("-")[0])
                 >= int(line.split(",")[0].split("-")[0])
                 and int(line.split(",")[1].split("-")[-1])

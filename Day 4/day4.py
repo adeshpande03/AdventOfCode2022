@@ -22,7 +22,8 @@ def part1(fileName):
 def part2(fileName):
     return sum(
         [
-            not (
+            not
+            (
                 (
                     int(line.split(",")[0].split("-")[1])
                     < int(line.split(",")[1].split("-")[0])

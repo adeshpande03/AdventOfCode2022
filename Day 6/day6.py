@@ -16,10 +16,12 @@ def part1(fileName):
         )
         + 4
     )
-    f = open(fileName).readline()
-    for i in range(0, len(f)):
-        if len(set(f[i : i + 4])) == 4:
-            return i + 4
+    
+    
+    # f = open(fileName).readline()
+    # for i in range(0, len(f)):
+    #     if len(set(f[i : i + 4])) == 4:
+    #         return i + 4
 
 
 def part2(fileName):
@@ -41,10 +43,12 @@ def part2(fileName):
         )
         + 14
     )
-    f = open(fileName).readline()
-    for i in range(0, len(f)):
-        if len(set(f[i : i + 14])) == 14:
-            return i + 14
+    
+    
+    # f = open(fileName).readline()
+    # for i in range(0, len(f)):
+    #     if len(set(f[i : i + 14])) == 14:
+    #         return i + 14
 
 
 if __name__ == "__main__":

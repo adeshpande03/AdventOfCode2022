@@ -53,9 +53,9 @@ def part2(fileName):
         newStr = ''
         for num in range(40):
             if num in i:
-                newStr += ('#')
+                newStr += ('##')
             else:
-                newStr += ('.')
+                newStr += ('..')
         totalStr += newStr + '\n'
     return totalStr[:-1]
         
@@ -69,6 +69,6 @@ if __name__ == "__main__":
         # part1(f"{os.path.dirname(os.path.realpath(__file__))}/test.txt"),
         # part1(f"{os.path.dirname(os.path.realpath(__file__))}/input.txt"),
         # part2(f"{os.path.dirname(os.path.realpath(__file__))}/test.txt"),
-        # part2(f"{os.path.dirname(os.path.realpath(__file__))}/input.txt"),
+        part2(f"{os.path.dirname(os.path.realpath(__file__))}/input.txt"),
         sep="\n",
     )

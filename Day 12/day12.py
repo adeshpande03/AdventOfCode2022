@@ -1,6 +1,5 @@
 from collections import deque
 
-
 def part1(fileName):
     f = open(fileName).read().strip()
     lines = [x for x in f.split("\n")]
